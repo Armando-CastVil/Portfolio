@@ -1,4 +1,8 @@
+
+import Image from "next/image";
+import ProfilePicture from "../Assets/pictures/ProfilePicture.jpg";
 export default function Home() {
+
   return (
     <main>
       {/* Navigation */}
@@ -62,10 +66,11 @@ export default function Home() {
             <div className="hero-circle hero-circle-one"></div>
             <div className="hero-circle hero-circle-two"></div>
 
-            <img
-              src="/profile.jpg"
+            <Image
+              src={ProfilePicture}
               alt="Armando Castaneda Villalobos"
               className="hero-image"
+              priority
             />
 
             <div className="dot-pattern"></div>
