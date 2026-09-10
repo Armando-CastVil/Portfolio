@@ -376,18 +376,20 @@ button {
 
 .hero-image {
   position: relative;
-
   z-index: 3;
 
   display: block;
 
-  width: 100%;
+  width: 75%;
+  height: auto;
 
   aspect-ratio: 1 / 1;
 
   object-fit: cover;
 
   border-radius: 9px;
+
+  margin: 0 auto;
 }
 
 .hero-circle {
