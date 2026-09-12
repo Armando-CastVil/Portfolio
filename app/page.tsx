@@ -44,9 +44,14 @@ export default function Home() {
 
             <p className="hero-description">
               I&apos;m a Computer Science graduate with experience in data
-              analysis, research, customer service, and problem solving.
+              analysis, research, and problem solving.
               I&apos;m passionate about using technology and data to build
-              practical solutions and make an impact.
+              practical solutions and make an impact. On the side I have also been one of the best competitive 
+              Super Smash Bros. players. I have been regionally ranked in at least four out of five iterations of the game while 
+              also being globally ranked in the last two. I enjoy applying my skills and knowledge in the pursuit of helping my community.
+               {
+                
+              }
             </p>
 
             <div className="hero-buttons">
