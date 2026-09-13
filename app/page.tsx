@@ -179,15 +179,12 @@ export default function Home() {
           <div className="experience-list">
             <Experience
               icon="CSL"
-              title="Reception Technician"
+              title="Machine Repair technician"
               company="CSL Plasma"
               date="Jun 2024 – Present"
               location="San Diego, CA"
               bullets={[
-                "Greeted and assisted donors while providing professional and customer-focused service.",
-                "Verified donor information and maintained accurate electronic records.",
-                "Handled sensitive situations and communicated effectively with donors and medical staff.",
-                "Trained and supported new employees with front-desk operations.",
+                "Fixed machines",
               ]}
             />
 
