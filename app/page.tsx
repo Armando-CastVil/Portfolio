@@ -184,7 +184,10 @@ export default function Home() {
               date="Jun 2024 – Present"
               location="San Diego, CA"
               bullets={[
-                "Fixed machines",
+                "Troubleshoot and diagnose plasmapheresis equipment failures to identify operational issues affecting the donation process.",
+                "Repair and restore equipment when appropriate to minimize interruptions to center operations.",
+                "Perform equipment checks and identify equipment requiring additional service or removal from operation.",
+                "Document equipment issues, repairs, and maintenance performed to maintain accurate service records and support equipment tracking",
               ]}
             />
 
