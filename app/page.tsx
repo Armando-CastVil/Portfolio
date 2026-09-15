@@ -244,7 +244,7 @@ export default function Home() {
               subtitle="Projects that demonstrate my technical and problem-solving skills."
             />
 
-            <a href="https://github.com/" className="text-link">
+            <a href="https://github.com/Armando-CastVil" className="text-link">
               View All Projects →
             </a>
           </div>
@@ -255,7 +255,7 @@ export default function Home() {
               title="Personal Portfolio Website"
               description="A responsive portfolio website built with Next.js, React, and TypeScript to showcase my experience, skills, and projects."
               tags={["Next.js", "React", "TypeScript", "CSS"]}
-              github="https://github.com/"
+              github="https://github.com/Armando-CastVil"
               demo="#"
             />
 
@@ -264,7 +264,7 @@ export default function Home() {
               title="Data Analysis Dashboard"
               description="Analyzed a dataset using Python and SQL to identify trends and created visualizations for better decision-making."
               tags={["Python", "SQL", "Pandas", "Matplotlib"]}
-              github="https://github.com/"
+              github="https://github.com/Armando-CastVil"
               demo="#"
             />
 
@@ -273,7 +273,7 @@ export default function Home() {
               title="LLM Performance Analysis"
               description="Evaluated and compared the performance of multiple large language models using quantitative metrics and analysis."
               tags={["Python", "Jupyter", "Data Analysis", "LLMs"]}
-              github="https://github.com/"
+              github="https://github.com/Armando-CastVil"
               demo="#"
             />
           </div>
@@ -326,7 +326,7 @@ export default function Home() {
               </a>
 
               <div className="social-links">
-                <a href="https://github.com/" aria-label="GitHub">
+                <a href="https://github.com/Armando-CastVil" aria-label="GitHub">
                   GitHub
                 </a>
 
