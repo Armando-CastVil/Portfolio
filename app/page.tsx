@@ -261,7 +261,7 @@ export default function Home() {
 
             <Project
               image="/projects/data-analysis.jpg"
-              title="Data Analysis Dashboard"
+              title="Smashbase.gg"
               description="Analyzed a dataset using Python and SQL to identify trends and created visualizations for better decision-making."
               tags={["Python", "SQL", "Pandas", "Matplotlib"]}
               github="https://github.com/Armando-CastVil"
