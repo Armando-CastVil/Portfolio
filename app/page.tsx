@@ -1,6 +1,7 @@
 
 import Image from "next/image";
 import ProfilePicture from "../Assets/pictures/ProfilePicture.jpg";
+import smashbaseLogo from "../Assets/pictures/smashbaselogo.webp"
 export default function Home() {
 
   return (
@@ -260,7 +261,7 @@ export default function Home() {
             />
 
             <Project
-              image="/projects/data-analysis.jpg"
+              image="/"
               title="Smashbase.gg"
               description="Analyzed a dataset using Python and SQL to identify trends and created visualizations for better decision-making."
               tags={["Python", "SQL", "Pandas", "Matplotlib"]}
