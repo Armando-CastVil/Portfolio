@@ -320,7 +320,7 @@ export default function Home() {
 
             <div className="contact-actions">
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:Armando.CastVil@gmail.com"
                 className="button button-primary"
               >
                 ✉ &nbsp; Get In Touch
