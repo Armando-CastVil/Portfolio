@@ -96,7 +96,7 @@ export default function Home() {
 
               <p>
                 I&apos;m a Computer Science graduate from San Diego State
-                University with a strong interest in data, technology, and
+                University San Marcos with a strong interest in data, technology, and
                 problem solving.
               </p>
 
