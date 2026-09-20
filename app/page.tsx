@@ -1,7 +1,7 @@
 
 import Image from "next/image";
-import ProfilePicture from "../Assets/pictures/ProfilePicture.jpg";
-import smashbaseLogo from "../Assets/pictures/smashbaselogo.webp"
+import ProfilePicture from "../public/pictures/ProfilePicture.jpg";
+import smashbaseLogo from "../public/pictures/smashbaselogo.webp"
 export default function Home() {
 
   return (
@@ -102,8 +102,7 @@ export default function Home() {
 
               <p>
                 My experience includes research with machine learning models,
-                quantitative data analysis, customer service, and working in
-                fast-paced environments. I enjoy learning new skills, taking
+                quantitative data analysis and data visualization. I enjoy learning new skills, taking
                 on challenges, and finding efficient solutions to real-world
                 problems.
               </p>
@@ -229,7 +228,6 @@ export default function Home() {
             <span>Data Visualization</span>
             <span>Problem Solving</span>
             <span>Communication</span>
-            <span>Customer Service</span>
             <span>Documentation</span>
             <span>Research</span>
           </div>
