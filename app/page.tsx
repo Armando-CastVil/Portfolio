@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import ProfilePicture from "../public/pictures/ProfilePicture.jpg";
-import smashbaseLogo from "../public/pictures/smashbaselogo.webp"
+import smashbaseLogo from "../public/pictures/smashbaselogo.webp";
 export default function Home() {
 
   return (
@@ -16,6 +16,7 @@ export default function Home() {
           <div className="nav-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
+            <a href="/Portfolio/blog">Blog</a>
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
