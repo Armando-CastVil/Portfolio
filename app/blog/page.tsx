@@ -1,3 +1,4 @@
+
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -40,10 +41,16 @@ function getPosts(): Post[] {
   );
 }
 
+function formatDate(date: string) {
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+}
+
 export default function BlogPage() {
   const posts = getPosts();
-  const featuredPost = posts[0];
-  const remainingPosts = posts.slice(1);
 
   return (
     <main className="blog-page">
@@ -61,8 +68,7 @@ export default function BlogPage() {
 
             <p className="blog-page-description">
               A collection of things I&apos;m learning, building,
-              and thinking about — from technology and career
-              development to projects and everything in between.
+              and thinking about. Also a collection of personal writings on topics that are staples of computer science.
             </p>
           </div>
 
@@ -74,153 +80,126 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Blog Content */}
-      <section className="blog-posts-section">
-        <div className="container">
+      {/* Blog Layout */}
+      <section className="blog-content-section">
+        <div className="container blog-layout">
 
-          {posts.length > 0 && (
-            <>
-              {/* Section heading */}
-              <div className="blog-section-header">
-                <div>
-                  <span className="section-label">
-                    LATEST
-                  </span>
+          {/* Chronological Sidebar */}
+          <aside className="blog-sidebar">
+            <div className="blog-sidebar-inner">
+              <span className="section-label">
+                ARCHIVE
+              </span>
 
-                  <h2>Featured article</h2>
-                </div>
+              <h2>Blog Entries</h2>
 
-                <span className="blog-post-count">
-                  {posts.length}{" "}
-                  {posts.length === 1 ? "article" : "articles"}
-                </span>
-              </div>
-
-              {/* Featured Post */}
-              <Link
-                href={`/blog/${featuredPost.slug}`}
-                className="featured-blog-card"
-              >
-                <div className="featured-blog-visual">
-                  <div className="featured-blog-number">
-                    01
-                  </div>
-
-                  <div className="featured-blog-shape"></div>
-
-                  <span className="featured-blog-label">
-                    FEATURED
-                  </span>
-                </div>
-
-                <div className="featured-blog-content">
-                  <div className="blog-post-meta">
-                    <span className="blog-category">
-                      {featuredPost.category}
-                    </span>
-
-                    <span className="blog-meta-divider">
-                      •
-                    </span>
-
-                    <span>
-                      {new Date(
-                        featuredPost.date
-                      ).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </span>
-                  </div>
-
-                  <h2>{featuredPost.title}</h2>
-
-                  <p>
-                    {featuredPost.description}
-                  </p>
-
-                  <span className="blog-read-more">
-                    Read Article
-                    <span className="blog-arrow">→</span>
-                  </span>
-                </div>
-              </Link>
-            </>
-          )}
-
-          {/* More Articles */}
-          {remainingPosts.length > 0 && (
-            <div className="more-posts">
-              <div className="blog-section-header">
-                <div>
-                  <span className="section-label">
-                    EXPLORE
-                  </span>
-
-                  <h2>More articles</h2>
-                </div>
-              </div>
-
-              <div className="blog-posts-grid">
-                {remainingPosts.map((post, index) => (
+              <div className="blog-timeline">
+                {posts.map((post, index) => (
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="blog-post-card"
+                    className={`blog-timeline-item ${
+                      index === 0
+                        ? "blog-timeline-item-active"
+                        : ""
+                    }`}
                     key={post.slug}
                   >
-                    <div className="blog-card-top">
-                      <span className="blog-card-number">
-                        {String(index + 2).padStart(2, "0")}
+                    <div className="timeline-dot"></div>
+
+                    <div className="timeline-content">
+                      <span className="timeline-date">
+                        {formatDate(post.date)}
                       </span>
 
-                      <span className="blog-category">
-                        {post.category}
+                      <span className="timeline-title">
+                        {post.title}
                       </span>
-                    </div>
-
-                    <div className="blog-post-content">
-                      <h3>{post.title}</h3>
-
-                      <p className="blog-post-date">
-                        {new Date(
-                          post.date
-                        ).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })}
-                      </p>
-
-                      <p className="blog-post-description">
-                        {post.description}
-                      </p>
-                    </div>
-
-                    <div className="blog-card-footer">
-                      <span>Read Article</span>
-                      <span className="blog-arrow">→</span>
                     </div>
                   </Link>
                 ))}
               </div>
+
+              {posts.length > 0 && (
+                <div className="blog-sidebar-count">
+                  {posts.length}{" "}
+                  {posts.length === 1
+                    ? "entry"
+                    : "entries"}
+                </div>
+              )}
             </div>
-          )}
+          </aside>
 
-          {/* Empty state */}
-          {posts.length === 0 && (
-            <div className="blog-empty">
-              <div className="blog-empty-icon">✦</div>
+          {/* Articles */}
+          <div className="blog-articles">
 
-              <h2>Nothing here yet.</h2>
+            {posts.length > 0 ? (
+              <>
+                <div className="blog-section-header">
+                  <div>
+                    <span className="section-label">
+                      LATEST
+                    </span>
 
-              <p>
-                I&apos;m working on some articles.
-                Check back soon.
-              </p>
-            </div>
-          )}
+                    <h2>Recent articles</h2>
+                  </div>
+                </div>
 
+                <div className="blog-article-list">
+                  {posts.map((post, index) => (
+                    <article
+                      className={`blog-article-card ${
+                        index === 0
+                          ? "blog-article-featured"
+                          : ""
+                      }`}
+                      key={post.slug}
+                    >
+                      <div className="blog-article-card-top">
+                        <span className="blog-category">
+                          {post.category}
+                        </span>
+
+                        <span className="blog-article-date">
+                          {formatDate(post.date)}
+                        </span>
+                      </div>
+
+                      <h3>{post.title}</h3>
+
+                      <p>
+                        {post.description}
+                      </p>
+
+                      <Link
+                        href={`/blog/${post.slug}`}
+                        className="blog-read-more"
+                      >
+                        Read Article
+                        <span className="blog-arrow">
+                          →
+                        </span>
+                      </Link>
+                    </article>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <div className="blog-empty">
+                <div className="blog-empty-icon">
+                  ✦
+                </div>
+
+                <h2>Nothing here yet.</h2>
+
+                <p>
+                  I&apos;m working on some articles.
+                  Check back soon.
+                </p>
+              </div>
+            )}
+
+          </div>
         </div>
       </section>
     </main>

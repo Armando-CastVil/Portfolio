@@ -1,7 +1,9 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import Link from "next/link";
 import { notFound } from "next/navigation";
+import ReactMarkdown from "react-markdown";
 
 type Post = {
   slug: string;
@@ -60,31 +62,70 @@ export default async function BlogPostPage({
 
   return (
     <main className="blog-post-page">
-      <article className="container">
-        <header className="blog-post-header">
-          <span className="blog-category">
-            {post.category}
-          </span>
+      {/* Article Header */}
+      <section className="blog-post-hero">
+        <div className="container blog-post-hero-inner">
+          <Link href="/blog" className="blog-back-link">
+            <span>←</span>
+            Back to Blog
+          </Link>
+
+          <div className="blog-post-meta">
+            <span className="blog-post-category">
+              {post.category}
+            </span>
+
+            <span className="blog-post-meta-divider">•</span>
+
+            <span>
+              {new Date(post.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </span>
+          </div>
 
           <h1>{post.title}</h1>
-
-          <p className="blog-post-date">
-            {new Date(post.date).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </p>
 
           <p className="blog-post-description">
             {post.description}
           </p>
-        </header>
 
-        <div className="blog-post-body">
-          {post.content}
+          <div className="blog-post-accent"></div>
         </div>
-      </article>
+      </section>
+
+      {/* Article Content */}
+      <section className="blog-post-content-section">
+        <div className="container">
+          <article className="blog-post-body">
+            <ReactMarkdown
+              components={{
+                a: ({ href, children }) => (
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {children}
+                  </a>
+                ),
+              }}
+            >
+              {post.content}
+            </ReactMarkdown>
+          </article>
+
+          {/* Back to Blog */}
+          <div className="blog-post-footer">
+            <Link href="/blog" className="blog-back-button">
+              <span>←</span>
+              Back to all articles
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

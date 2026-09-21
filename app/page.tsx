@@ -252,10 +252,10 @@ export default function Home() {
           <div className="projects-grid">
             <Project
               image="/projects/portfolio.jpg"
-              title="Personal Portfolio Website"
-              description="A responsive portfolio website built with Next.js, React, and TypeScript to showcase my experience, skills, and projects."
+              title="Blog"
+              description="A blog where I write about Computer Science topics like programming languages and system"
               tags={["Next.js", "React", "TypeScript", "CSS"]}
-              github="https://github.com/Armando-CastVil"
+              github="https://armando-castvil.github.io/portfolio/"
               demo="#"
             />
 
@@ -265,13 +265,13 @@ export default function Home() {
               description="Analyzed a dataset using Python and SQL to identify trends and created visualizations for better decision-making."
               tags={["Python", "SQL", "Pandas", "Matplotlib"]}
               github="https://github.com/Armando-CastVil"
-              demo="#"
+              demo="smashbase.gg"
             />
 
             <Project
               image="/projects/llm.jpg"
-              title="LLM Performance Analysis"
-              description="Evaluated and compared the performance of multiple large language models using quantitative metrics and analysis."
+              title="Coming soon..."
+              description="Coming soon"
               tags={["Python", "Jupyter", "Data Analysis", "LLMs"]}
               github="https://github.com/Armando-CastVil"
               demo="#"
