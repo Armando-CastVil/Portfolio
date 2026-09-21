@@ -16,7 +16,7 @@ export default function Home() {
           <div className="nav-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="/Portfolio/blog">Blog</a>
+            <a href="/portfolio/blog">Blog</a>
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
