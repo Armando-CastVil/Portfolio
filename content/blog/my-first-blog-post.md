@@ -1,32 +1,39 @@
 ---
 title: "My First Blog Post"
 date: "2026-09-20"
-description: "Welcome to my new personal blog."
-category: "Personal"
+description: "A few thoughts about building my portfolio and what I've learned along the way."
+category: "Projects"
 ---
 
-# Welcome to My Blog
+# Introduction
 
-Welcome to my blog!
+This is my first blog post.
 
-I'll be using this space to write about things I'm learning, projects I'm working on, and topics that I find interesting.
+I'm using this blog to document things I'm learning, projects I'm working on, and ideas that I find interesting.
+I am also using this first blog post as a test, think of it as the Hello World! of blog posts.
 
-## What I'll be writing about
+## Why I Built This
 
-Some of the topics I plan to cover include:
+I wanted a place where I could document my progress rather than simply putting a finished portfolio online.
 
-- Software development
-- Next.js and React
-- Data analysis
-- Computer science
-- Actuarial science
-- Career development
-- Things I learn from personal projects
+There is something useful about being able to look back and see how a project developed over time.
 
-## Why I started this blog
+### What I'm Learning
 
-I wanted a place where I could document what I'm learning rather than simply listing technologies on my resume.
+A few things I've been working on:
 
-Writing about a topic also forces me to understand it more deeply.
+- Next.js
+- React
+- TypeScript
+- GitHub Pages
+- Markdown-based content
 
-Thanks for stopping by!
+> Building something yourself teaches you things that tutorials don't always cover.
+
+## What's Next?
+
+I'll be adding new posts regularly as I continue working on projects and learning new technologies.
+
+---
+
+Thanks for reading.
